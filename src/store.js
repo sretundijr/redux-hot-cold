@@ -1,5 +1,5 @@
-import {createStore, applyMiddleware} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
-import reducer from './reducer';
+import { guessGameReducer } from './reducer';
 
-export default createStore(reducer);
+export default createStore(guessGameReducer);

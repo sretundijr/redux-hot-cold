@@ -11,13 +11,13 @@ const initialState = {
     showInfoModal: false
 };
 
-export default (state, action) => {
+export const guessGameReducer = (state, action) => {
     state = state || initialState;
     if (action.type === NEW_GAME) {
         state = Object.assign({
         }, initialState, {
-            correctAnswer: action.correctAnswer
-        });
+                correctAnswer: action.correctAnswer
+            });
         return state;
     }
     else if (action.type === MAKE_GUESS) {
@@ -57,8 +57,8 @@ export default (state, action) => {
         return state;
     }
     else if (action.type === TOGGLE_INFO_MODAL) {
-         state = Object.assign({}, state, {
-             showInfoModal: !state.showInfoModal
+        state = Object.assign({}, state, {
+            showInfoModal: !state.showInfoModal
         });
         return state;
     }
